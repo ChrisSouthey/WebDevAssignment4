@@ -20,8 +20,9 @@
             <div>
                 <label for="department">Department</label>
                 <select id="department" name="department" required>
+                    <option value="" disabled {{#unless form.department}}selected{{/unless}}>Select</option>
                     {{#each departments}}
-                    <option value="{{value}}" {{#if selected}}selected{{/if}}>{{value}}</option>
+                    <option value="{{name}}" {{#if selected}}selected{{/if}}>{{name}}</option>
                     {{/each}}
                 </select>
             </div>
